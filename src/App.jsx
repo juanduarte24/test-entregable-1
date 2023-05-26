@@ -22,7 +22,9 @@ function App() {
   return (
     <main className={`app ${bgImage}`}>
       <section className='app-container'>
-        <h1>Space Info</h1>
+        <div className='container-title'>
+        <h1 className='title'>Space Info</h1>
+        </div>
         <QuoteBox handleChangePhrase={handleChangePhrase} phrase={quote.phrase} />
 
         <footer>Fuente: {quote.author} </footer>
