@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import './App.css'
-import dbFortune from './db/quote.json'
+import dbFortune from './db/phrases.json'
 import { getRandom } from './utils/random'
 import QuoteBox from './components/QuoteBox'
 
