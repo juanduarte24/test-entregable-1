@@ -25,7 +25,7 @@ function App() {
         <div className='container-title'>
         <h1 className='title'>Galletas de la Fortuna</h1>
         </div>
-        <QuoteBox handleChangePhrase={handleChangePhrase} phrase={quote.phrase} />
+        <QuoteBox handleChangePhrase={handleChangePhrase} phrase={phrases.phrase} />
 
         <footer>Fuente: {phrases.author} </footer>
       </section>
