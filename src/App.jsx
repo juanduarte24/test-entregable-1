@@ -8,13 +8,13 @@ import QuoteBox from './components/QuoteBox'
 const bgImages = ['bg1','bg2','bg3','bg4']
 
 function App() {
-  const [quote, setQuote] = useState(getRandom(dbFortune)) // creamos un estad donde se mostrara la frase
+  const [phrase, setPhrase] = useState(getRandom(dbFortune)) // creamos un estad donde se mostrara la frase
   // le pasamos la funcion que habiamos creado y el valor inicial sera la base que tenemos almacenada
   //para que de ahi escoga la frase aleatoria
   const [bgImage, setBgImage] = useState(getRandom(bgImages))
 
   const handleChangePhrase = () => {
-    setQuote(getRandom(dbFortune))
+    setPhrase(getRandom(dbFortune))
     setBgImage(getRandom(bgImages))
   }
   
@@ -25,9 +25,9 @@ function App() {
         <div className='container-title'>
         <h1 className='title'>Galletas de la Fortuna</h1>
         </div>
-        <QuoteBox handleChangePhrase={handleChangePhrase} phrase={phrases.phrase} />
+        <QuoteBox handleChangePhrase={handleChangePhrase} phrase={phrase.phrase} />
 
-        <footer>Fuente: {phrases.author} </footer>
+        <footer>Fuente: {phrase.author} </footer>
       </section>
     </main>
   )
