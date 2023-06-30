@@ -5,7 +5,7 @@ import dbFortune from './db/phrases.json'
 import { getRandom } from './utils/random'
 import QuoteBox from './components/QuoteBox'
 
-const bgImages = ['bg1','bg2','bg3','bg4']
+const bgImages = ['bg1', 'bg2', 'bg3', 'bg4']
 
 function App() {
   const [phrase, setPhrase] = useState(getRandom(dbFortune)) // creamos un estad donde se mostrara la frase
@@ -17,13 +17,13 @@ function App() {
     setPhrase(getRandom(dbFortune))
     setBgImage(getRandom(bgImages))
   }
-  
+
 
   return (
     <main className={`app ${bgImage}`}>
       <section className='app-container'>
         <div className='container-title'>
-        <h1 className='title'>Galletas de la Fortuna</h1>
+          <h1 className='title'>Galletas de la Fortuna!</h1>
         </div>
         <QuoteBox handleChangePhrase={handleChangePhrase} phrase={phrase.phrase} />
 
